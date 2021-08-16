@@ -1,0 +1,278 @@
+@import "global";
+
+// start header
+
+.header {
+  background-image: url(../images/header__bg.jpg);
+  padding: 20px 0 20px;
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__back {
+      &-link {
+        padding-left: 60px;
+        text-transform: uppercase;
+        position: relative;
+        transition: all 0.25s;
+        &:hover {
+          text-shadow: 1px 1px 11px rgba(255, 255, 255, 0.82), 1px 1px 4px rgba(255, 255, 255, 0.2);
+          &::before {
+            transform: scale(1.15);
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url(../images/icon__sprite.svg);
+          left: 0;
+          top: -13px;
+          width: 50px;
+          height: 45px;
+          background-position: -72px -85px;
+          transition: all 0.25s;
+        }
+      }
+    }
+    &__money {
+      display: flex;
+      &-item {
+        width: 179px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: #0d0b0f;
+        border-radius: 50px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -18px;
+          background-image: url(../images/icon__sprite.svg);
+        }
+        & + & {
+          margin-left: 100px;
+        }
+      }
+      &-info {
+        margin: 0 auto;
+        width: 55px;
+      }
+
+      &-name {
+        font-family: "Roboto";
+        font-size: 10px;
+        color: #b9b7ea;
+      }
+      &-link {
+        position: absolute;
+        right: 0;
+        top: -7px;
+        background-image: url(../images/icon__sprite.svg);
+        width: 55px;
+        height: 55px;
+        background-position: -170px -81px;
+        transition: all 0.25s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__home {
+      &-link {
+        padding-left: 38px;
+        text-transform: uppercase;
+        position: relative;
+        transition: all 0.25s;
+        &:hover {
+          text-shadow: 1px 1px 11px rgba(255, 255, 255, 0.82), 1px 1px 4px rgba(255, 255, 255, 0.2);
+          &::before {
+            transform: scale(1.15);
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          left: -8px;
+          top: -10px;
+          background-image: url(../images/icon__sprite.svg);
+          background-position: -125px -84px;
+          transition: all 0.25s;
+        }
+      }
+    }
+  }
+}
+
+.header-menu__money-item--coin {
+  &::before {
+    width: 69px;
+    height: 69px;
+    background-position: 0px -80px;
+    left: -15px;
+  }
+}
+.header-menu__money-item--crystal {
+  &::before {
+    width: 81px;
+    height: 82px;
+    background-position: -28px 0px;
+    left: -35px;
+  }
+}
+
+// end header
+
+// start main
+
+.main {
+  background-image: url(../images/main__bg.jpg);
+  background-color: #16151f;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 10px 0 85px;
+  &-inner {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab {
+    background-color: #212031;
+    max-width: 188px;
+    height: 54px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 20px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    cursor: pointer;
+    color: #7a789b;
+  }
+  .tab.active {
+    color: #fff;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      height: 2px;
+      background: rgb(245, 44, 191);
+      background: linear-gradient(90deg, rgba(245, 44, 191, 1) 0%, rgba(255, 124, 70, 1) 76%);
+    }
+  }
+  .tab__content {
+    background-color: #242333;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .tab-item-inner-wrapper + .tab-item-inner-wrapper {
+    border-top: 2px solid #2d2c46;
+  }
+  .tab-item {
+    &-inner {
+      padding: 24px 8px 30px;
+    }
+    &__title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: 217px 217px 217px 217px;
+      grid-gap: 20px;
+    }
+    &__block {
+      width: 253px;
+      height: 320px;
+      background-image: url(../images/block__bg.jpg);
+      background-position: center;
+      text-align: center;
+      padding: 20px 31px 15px;
+      position: relative;
+      // transition: all 0.2s;
+      // &:hover {
+      //   transform: scale(1.02);
+      // }
+      &-bonus {
+        position: absolute;
+        width: 96px;
+        height: 78px;
+        background-position: -110px 0px;
+        left: 18px;
+        top: -4px;
+      }
+      &-img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        margin-bottom: 9px;
+      }
+      &-extra {
+        font-size: 30px;
+        font-family: "Roboto";
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      &-name {
+        font-family: "Roboto";
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+      &-link {
+        max-width: 165px;
+        width: 100%;
+        background: linear-gradient(270deg, rgba(36, 35, 51, 1) 0%, rgba(60, 59, 83, 1) 76%);
+        border: 2px solid;
+        border-color: #973dbd;
+        text-align: left;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-family: "Roboto";
+        font-size: 14px;
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(0.95);
+        }
+        span {
+          padding-left: 33px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: -1px;
+            background-image: url(../images/icon__sprite.svg);
+            width: 11px;
+            height: 18px;
+            background-position: -4px -26px;
+          }
+        }
+      }
+    }
+  }
+}
+.tab-item-inner--money {
+  .tab-item__block-link span::before {
+    width: 28px;
+    height: 28px;
+    background-position: 0px -50px;
+    left: 4px;
+    top: -8px;
+    transform: scale(0.8);
+  }
+}
+// end main
+
+@import "media";

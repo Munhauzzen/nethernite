@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: #fff;
+  font-family: "leksa-sans-bold";
+  font-size: 18px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+.container {
+  max-width: 1306px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype"), url("../fonts/HelveticaNeue.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype"), url("../fonts/HelveticaNeue.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "leksa-sans-bold";
+  src: url("../fonts/LeksaSans-Bold.otf") format("woff"), url("../fonts/LeksaSans-Bold.otf") format("opentype"),
+    url("../fonts/LeksaSans-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "leksa-sans-extrabold";
+  src: url("../fonts/LeksaSans-ExtraBold.otf") format("woff"),
+    url("../fonts/LeksaSans-ExtraBold.otf") format("opentype"),
+    url("../fonts/LeksaSans-ExtraBold.otf") format("truetype");
+}
